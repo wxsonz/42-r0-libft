@@ -6,7 +6,7 @@
 /*   By: wchaipro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 11:44:20 by wchaipro          #+#    #+#             */
-/*   Updated: 2024/09/10 12:19:18 by wchaipro         ###   ########.fr       */
+/*   Updated: 2024/09/14 00:02:20 by wchaipro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@
 // extract this word with ft_substring with data we have
 // move *wordarr addr up to put in another word
 // after we done NULL terminated the thing
+/*
+static char	**ft_free(char **str)
+{
+	while (str)
+		free(*str--);
+	free(str);
+	return (NULL);
+}
+*/
+
 static void	word_in(char **wordarr, const char *s, char c)
 {
 	const char	*wordstart;

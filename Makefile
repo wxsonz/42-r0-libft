@@ -13,14 +13,17 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_
 SRCS_O = $(SRCS:.c=.o)
 BONUS_O = $(BONUS:.c=.o)
 
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)
-
 all: $(NAME)
+
+%.o: %.c Makefile libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(SRCS_O)
 	ar rc $(NAME) $(SRCS_O)
+
+so:
+	$(CC) -fPIC -nostartfiles $(CFLAGS) $(SRCS)
+	$(CC) -nostartfiles -shared -o libft.so $(SRCS_O)
 
 bonus: $(SRCS_O) $(BONUS_O)
 	ar rc $(NAME) $(BONUS_O) $(SRCS_O)
@@ -32,4 +35,6 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re so
 

@@ -6,14 +6,24 @@
 /*   By: wchaipro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 11:43:31 by wchaipro          #+#    #+#             */
-/*   Updated: 2024/09/10 11:43:46 by wchaipro         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:09:43 by wchaipro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// check same
-// check it has space (exclude 2 '\n') to safely memcpy
+// check if they both are the same if so return the dst
+//
+// check if source - dest - n have less space ('\0' from s and d) * n
+// source 10
+// dst 10
+// n 4
+//
+// 10 - 10 - 4 <= -2 * 4 ?
+// -14 <= -8?
+//
+// than t has space (exclude 2 '\0') to safely memcpy
+//
 // check if dest is less than src then do loop unrolling fill 
 // else just do backward copy to avoid overlap
 
