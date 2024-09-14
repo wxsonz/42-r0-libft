@@ -6,7 +6,7 @@
 /*   By: wchaipro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 11:43:31 by wchaipro          #+#    #+#             */
-/*   Updated: 2024/09/13 19:09:43 by wchaipro         ###   ########.fr       */
+/*   Updated: 2024/09/14 23:34:04 by wchaipro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@
 // s1 s2 s1 s2 -> s1 s2 d1 d2
 //       ->             ^^
 // s1 s2 s1 s2 -> s1 s4 s1 d2
+/* WIP NOT SAFE DONT USE
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
@@ -71,7 +72,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			d[n] = s[n];
 	return (dest);
 }
-/*
+*/
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*s;
@@ -87,4 +89,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		d[n] = s[n];
 	return (dest);
 }
-*/
