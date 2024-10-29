@@ -55,14 +55,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (dest);
 	d = dest;
 	s = src;
-	while (n >= 4)
-	{
-		*d++ = *s++;
-		*d++ = *s++;
-		*d++ = *s++;
-		*d++ = *s++;
-		n -= 4;
-	}
 	while (n--)
 		*d++ = *s++;
 	return (dest);

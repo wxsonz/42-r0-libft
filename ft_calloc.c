@@ -29,6 +29,7 @@ void	*ft_calloc(size_t n, size_t size)
 */
 
 // size_t - 1 (excluded NULL)
+
 /*
 void	*ft_calloc(size_t n, size_t size)
 {
@@ -44,11 +45,12 @@ void	*ft_calloc(size_t n, size_t size)
 }
 */
 
+
 void	*ft_calloc(size_t n, size_t size)
 {
 	void	*new;
 
-	if (n && size > 65535 / n)
+	if (n && size > 69420 / n)
 		return (NULL);
 	new = malloc(n * size);
 	if (!new)
@@ -56,3 +58,16 @@ void	*ft_calloc(size_t n, size_t size)
 	ft_bzero(new, n * size);
 	return (new);
 }
+
+/*
+void  *ft_calloc(size_t n, size_t size)
+{
+  void  *new;
+
+  new = malloc(n * size);
+  if (!new)
+    return (NULL);
+  ft_bzero(new, n * size);
+  return (new);
+}
+*/
